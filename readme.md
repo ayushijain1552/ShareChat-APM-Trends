@@ -246,7 +246,7 @@ http://localhost:3000
 # 10. Deployment Links
 
 ## Frontend
-- [text](https://share-chat-apm-trends-o9nd.vercel.app/)
+- https://share-chat-apm-trends-o9nd.vercel.app/
 
 ## Backend API
 - https://sharechat-apm-trends.onrender.com/trends
