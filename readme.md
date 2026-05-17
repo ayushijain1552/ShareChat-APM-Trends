@@ -61,7 +61,7 @@ The frontend consumes this data through a mobile-first Next.js interface.
 
 ### Workflow Diagram
 
-![Architecture Diagram](./frontend/Pipeline diagram_SCAPM.png)
+![Architecture Diagram](frontend/Pipeline diagram_SCAPM.png)
 
 
 
