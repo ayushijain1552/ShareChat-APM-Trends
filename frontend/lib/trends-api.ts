@@ -7,8 +7,9 @@ import {
 } from '@/lib/trend-explainability'
 import { buildFallbackTrendScore } from '@/lib/trend-score'
 
-export const TRENDS_API_URL =
-  process.env.NEXT_PUBLIC_TRENDS_API_URL ?? 'http://127.0.0.1:8010/trends'
+const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8010'
+
+export const TRENDS_API_URL = `${API_BASE}/trends`
 
 export interface ApiSourceBreakdown {
   google_trends_score: number
@@ -234,7 +235,9 @@ export function mapApiTrendToTrend(item: ApiTrendItem, index: number): Trend {
 }
 
 export async function fetchTrends(): Promise<TrendsPayload> {
-  const response = await fetch(TRENDS_API_URL, { cache: 'no-store' })
+  const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL ?? 'http://127.0.0.1:8010'}/trends`, {
+    cache: 'no-store',
+  })
 
   if (!response.ok) {
     throw new Error(`Could not load trends (${response.status})`)
